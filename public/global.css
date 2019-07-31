@@ -1,3 +1,63 @@
+:root {
+	/* typography */
+	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--font-family-base: var(--font-family-sans-serif);
+	--headings-margin-bottom: 1.5rem;
+	--paragraph-margin-bottom: 1.5rem;
+	/* all color definitions */
+	--color-white: #fff;
+	--color-gray-100: #f8f9fa;
+	--color-gray-200: #e9ecef;
+	--color-gray-300: #dee2e6;
+	--color-gray-400: #ced4da;
+	--color-gray-500: #adb5bd;
+	--color-gray-600: #6c757d;
+	--color-gray-700: #495057;
+	--color-gray-800: #343a40;
+	--color-gray-900: #212529;
+	--color-black: #000;
+	--color-blue: #007bff;
+	--color-indigo: #6610f2;
+	--color-purple: #6f42c1;
+	--color-pink: #e83e8c;
+	--color-red: #dc3545;
+	--color-orange: #fd7e14;
+	--color-yellow: #ffc107;
+	--color-green: #28a745;
+	--color-teal: #20c997;
+	--color-cyan: #17a2b8;
+	/* brand color definitions */
+	--brand-color-primary: var(--color-blue);
+	--brand-color-secondary: var(--color-gray-600);
+	--brand-color-success: var(--color-green);
+	--brand-color-info: var(--color-cyan);
+	--brand-color-warning: var(--color-yellow);
+	--brand-color-danger: var(--color-red);
+	--brand-color-light: var(--color-gray-200);
+	--brand-color-dark: var(--color-gray-800);
+	/* spacing and sizes */
+	--spacing-default: 1rem;
+	--border-radius: 0.3rem;
+}
+
+/* Change from `box-sizing: content-box` so that `width` is
+not affected by `padding` or `border`. */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	/* make the default reasonable across all browsers */
+	line-height: 1.15;
+	/* Prevent adjustments of font size after orientation
+	changes in IE on Windows Phone and in iOS. */
+	-webkit-text-size-adjust: 100%;
+	/* Change the default tap highlight to be completely
+	transparent in iOS. */
+	-webkit-tap-highlight-color: rgba(var(--color-black), 0);
+}
+
 html, body {
 	position: relative;
 	width: 100%;
@@ -5,58 +65,21 @@ html, body {
 }
 
 body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: var(--font-family-base);
 }
 
-a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+/* Remove top margins from headings.
+By default, h1-h6 all receive top and bottom margins. We remove the top
+margin for easier control within type scales as it avoids margin collapsing. */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--headings-margin-bottom);
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: rgb(0,80,160);
-}
-
-label {
-	display: block;
-}
-
-input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-}
-
-input:disabled {
-	color: #ccc;
-}
-
-input[type="range"] {
-	height: 0;
-}
-
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
+/* Reset margins on paragraphs.
+Similarly, the top margin on `<p>`s get reset. However, we also reset the
+bottom margin to use `rem` units instead of `em`. */
+p {
+  margin-top: 0;
+  margin-bottom: var(--paragraph-margin-bottom);
 }

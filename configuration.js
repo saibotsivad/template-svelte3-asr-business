@@ -1,4 +1,7 @@
 export default {
+	// For local development, you may need to override this
+	// for things like the Twitter card metadata.
+	baseUrl: 'http://localhost:5000',
 	// The default title used when the page is
 	// loaded. Other routes might override this.
 	title: 'My Webapp',
@@ -10,15 +13,26 @@ export default {
 	// When launched from a desktop shortcut, this
 	// color is used before assets are loaded.
 	backgroundColor: '#fff',
+	// TODO: what is this used for?
+	themeColor: '#ff3e00',
+	// TODO: either always true, or enable/disable for local development?
+	serviceWorker: true,
+	// If set, this will add the Twitter card metadata.
+	// twitterUsername: 'saibotsivad',
 	// Used by the operating system as the webapp
 	// icon placed on the desktop. Use a relative
 	// URL, e.g. not prefixed with '/'.
 	icons: [
+		// TODO add for other sizes, e.g. 72, 96, 144, 168
 		{
-			src: 'images/touch/homescreen48.png',
-			sizes: '48x48',
+			src: 'asset/icon-android-chrome-192.png',
+			sizes: '192x192',
+			type: 'image/png'
+		},
+		{
+			src: 'asset/icon-android-chrome-512.png',
+			sizes: '512x512',
 			type: 'image/png'
 		}
-		// and so on for other sizes, e.g. 72, 96, 144, 168, 192
 	]
 }

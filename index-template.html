@@ -4,12 +4,28 @@
 	<meta charset="utf8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="{{themeColor}}">
 
 	<title>{{title}}</title>
 
-	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="icon" type="image/png" href="asset/favicon.png">
 	<link rel="stylesheet" href="asset/global.css">
 	<link rel="stylesheet" href="bundle.css">
+
+	{{#twitterUsername}}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@{{twitterUsername}}">
+	<meta name="twitter:creator" content="@{{twitterUsername}}">
+	<meta name="twitter:image" content="{{{baseUrl}}}/asset/twitter-card.png">
+	{{/twitterUsername}}
+
+	{{#serviceWorker}}
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js')
+		}
+	</script>
+	{{/serviceWorker}}
 
 	<script defer src="bundle.js"></script>
 </head>

@@ -10,6 +10,7 @@ writeFileSync(
 			start_url: '.',
 			display: 'standalone',
 			background_color: configuration.backgroundColor,
+			theme_color: configuration.themeColor,
 			description: configuration.description,
 			icons: configuration.icons
 		},

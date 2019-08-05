@@ -1,5 +1,6 @@
 import { terser } from 'rollup-plugin-terser'
 import commonjs from 'rollup-plugin-commonjs'
+import configuration from './configuration.js'
 import livereload from 'rollup-plugin-livereload'
 import resolve from 'rollup-plugin-node-resolve'
 import svelte from 'rollup-plugin-svelte'
@@ -13,7 +14,7 @@ export default {
 		sourcemap: true,
 		format: 'iife',
 		name: 'asr',
-		file: 'public/build/bundle.js'
+		file: 'public/bundle.js'
 	},
 	plugins: [
 		svelte({
@@ -22,7 +23,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file — better for performance
 			css: css => {
-				css.write('public/build/bundle.css')
+				css.write('public/bundle.css')
 			}
 		}),
 
@@ -46,7 +47,7 @@ export default {
 		production && terser(),
 		production && visualizer({
 			filename: './public/stats.html',
-			title: 'My Svelte Project'
+			title: configuration.title
 		})
 	],
 	watch: {

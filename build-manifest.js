@@ -2,7 +2,7 @@ import { writeFileSync } from 'fs'
 import configuration from './configuration.js'
 
 writeFileSync(
-	'./public/manifest.json',
+	'./public/manifest.webmanifest',
 	JSON.stringify(
 		{
 			name: configuration.title,

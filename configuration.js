@@ -18,7 +18,7 @@ export default {
 	// TODO: either always true, or enable/disable for local development?
 	serviceWorker: true,
 	// If set, this will add the Twitter card metadata.
-	// twitterUsername: 'saibotsivad',
+	twitterUsername: 'saibotsivad',
 	// Used by the operating system as the webapp
 	// icon placed on the desktop. Use a relative
 	// URL, e.g. not prefixed with '/'.

@@ -40,7 +40,7 @@ export default {
 
 		// Watch the `asset` directory and refresh the
 		// browser on changes when not in production
-		!production && livereload('asset'),
+		!production && livereload('public'),
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify and build bundle stats

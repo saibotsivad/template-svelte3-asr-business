@@ -7,12 +7,12 @@ import resolve from 'rollup-plugin-node-resolve'
 const production = !process.env.ROLLUP_WATCH
 
 export default {
-	input: 'src/node_modules/app/service-worker.js',
+	input: 'src/node_modules/app/serviceworker.js',
 	output: {
 		sourcemap: true,
 		format: 'iife',
 		name: 'asrServiceWorker',
-		file: 'public/service-worker.js'
+		file: 'public/serviceworker.js'
 	},
 	plugins: [
 		json(),

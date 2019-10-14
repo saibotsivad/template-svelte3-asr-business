@@ -2,3 +2,4 @@
 /public
 /src/node_modules/app/globbed-*
 /.service-worker-lists.json
+/.cache

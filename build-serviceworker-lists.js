@@ -7,9 +7,18 @@ const files = glob
 		nodir: true
 	})
 
+const styles = process.env.DEVELOP
+	? [
+		'bootstrap.css',
+		'bootstrap.css.map',
+	]
+	: [
+		'bootstrap.min.css',
+		'bootstrap.min.css.map',
+	]
+files.push(...styles)
+
 files.push(...[
-	'bundle.css',
-	'bundle.css.map',
 	'bundle.js',
 	'bundle.js.map',
 	'serviceworker-lists.json',

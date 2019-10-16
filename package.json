@@ -8,6 +8,11 @@
       "limit": "300ms"
     }
   ],
+  "nodemonConfig": {
+    "ignoreRoot": [
+      ".git"
+    ]
+  },
   "devDependencies": {
     "bootstrap": "^4.3.1",
     "cheap-watch": "^1.0.2",
@@ -59,6 +64,7 @@
     "rollup:serviceworker": "rollup --config=rollup-serviceworker.config.js",
     "dev": "export DEVELOP=true && npm run clean && run-p build:* && run-p start:dev autobuild:*",
     "autobuild:css": "nodemon --watch style/ --ext scss --exec \"npm run css:lint && npm run css:compile\"",
+    "autobuild:routes": "nodemon --watch src/node_modules/app/route/ --exec \"npm run build:routes\"",
     "autobuild:watch": "node -r esm watch.js",
     "autobuild:webapp": "rollup --config=rollup-webapp.config.js -w",
     "autobuild:serviceworker": "rollup --config=rollup-serviceworker.config.js -w",

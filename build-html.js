@@ -2,9 +2,15 @@ import { readFileSync, writeFileSync } from 'fs'
 import configuration from './configuration.js'
 import { render } from 'mustache'
 
-configuration.style = process.env.DEVELOP
-	? 'bootstrap.css'
-	: 'bootstrap.min.css'
+configuration.styles = process.env.DEVELOP
+	? [
+		'global.css',
+		'bundle.css'
+	]
+	: [
+		'global.min.css',
+		'bundle.min.css'
+	]
 
 const template = readFileSync(
 	'./index-template.html',

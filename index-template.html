@@ -19,7 +19,9 @@
 	<meta name="msapplication-config" content="browserconfig.xml">
 	<meta name="theme-color" content="{{themeColor}}">
 
-	<link rel="stylesheet" href="{{style}}">
+	{{#styles}}
+	<link rel="stylesheet" href="{{.}}">
+	{{/styles}}
 
 	{{#twitterUsername}}
 	<meta name="twitter:card" content="summary_large_image">

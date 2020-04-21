@@ -1,7 +1,24 @@
+:root {
+	--color-primary: #007bff;
+	--color-secondary: #6c757d;
+	--color-success: #28a745;
+	--color-danger: #dc3545;
+	--color-warning: #ffc107;
+	--color-info: #17a2b8;
+	--color-light: #f6f6f6;
+	--color-dark: #343a40;
+	--color-body: #212529;
+	--color-muted: #6c757d;
+	--color-white: #ffffff;
+	--color-black-50: rgba(0,0,0,.5);
+	--color-white-50: rgba(255,255,255,.5);
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background-color: blue;
+	background-color: var(--color-white);
+	line-height:1;
 }

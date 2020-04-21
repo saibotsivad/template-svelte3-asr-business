@@ -17,6 +17,12 @@ npm run dev
 
 This will build all assets, start a server at [localhost:5000](http://localhost:5000), and rebuild on any file changes.
 
+## Quick Links
+
+* [The SPA webapp](http://localhost:5000)
+* [The style guide](http://localhost:5000/guide.html)
+* [Dependency size visualization](http://localhost:5000/stats.html)
+
 ## Goals
 
 Building a complete enterprise grade webapp is not necessarily *complicated* (most of the technology is known to someone somewhere), but it is not at all *easy*.

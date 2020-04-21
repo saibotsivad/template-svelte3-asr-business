@@ -40,6 +40,7 @@
     "test:size": "npm run build && size-limit"
   },
   "devDependencies": {
+    "@size-limit/preset-app": "^4.4.5",
     "autoprefixer": "^9.7.6",
     "cheap-watch": "^1.0.2",
     "clean-css-cli": "^4.3.0",

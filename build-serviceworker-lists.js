@@ -9,12 +9,16 @@ const files = glob
 
 const styles = process.env.DEVELOP
 	? [
-		'bootstrap.css',
-		'bootstrap.css.map',
+		'global.css',
+		'global.css.map',
+		'bundle.css',
+		'bundle.css.map',
 	]
 	: [
-		'bootstrap.min.css',
-		'bootstrap.min.css.map',
+		'global.min.css',
+		'global.min.css.map',
+		'bundle.min.css',
+		'bundle.min.css.map',
 	]
 files.push(...styles)
 

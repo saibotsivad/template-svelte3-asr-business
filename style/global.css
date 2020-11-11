@@ -1,10 +1,22 @@
 :root {
 	--color-primary: #007bff;
+	--color-primary-dark: #166fce;
+
 	--color-secondary: #6c757d;
+	--color-secondary-dark: #555a60;
+
 	--color-success: #28a745;
+	--color-success-dark: #28a745;
+
 	--color-danger: #dc3545;
+	--color-danger-dark: #dc3545;
+
 	--color-warning: #ffc107;
+	--color-warning-dark: #ffc107;
+
 	--color-info: #17a2b8;
+	--color-info-dark: #17a2b8;
+
 	--color-light: #f6f6f6;
 	--color-dark: #343a40;
 	--color-body: #212529;
@@ -20,5 +32,5 @@
 
 body {
 	background-color: var(--color-white);
-	line-height:1;
+	line-height: 1;
 }
